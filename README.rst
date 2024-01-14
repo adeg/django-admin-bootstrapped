@@ -12,7 +12,7 @@ of modification on your side, just add it to the installed apps.
 Requirements
 ------------
 
--  Django ``1.11``
+-  Django ``3.2``
 
 
 Installation
