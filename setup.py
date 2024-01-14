@@ -21,7 +21,7 @@ setup(
     maintainer="Tendenci",
     maintainer_email="programmers@tendenci.com",
     name='tendenci-django-admin-bootstrapped',
-    version='5.1',
+    version='5.2',
     description='A Bootstrap theme for Django Admin',
     long_description=open(os.path.join(os.path.dirname(__file__), 'README.rst')).read(),
     url='https://github.com/tendenci/django-admin-bootstrapped',
