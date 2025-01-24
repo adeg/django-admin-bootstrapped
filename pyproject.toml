@@ -1,0 +1,72 @@
+[build-system]
+requires = ["setuptools>=61.0", "Django>=3.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "django-admin-bootstrapped"
+version = "5.2"
+description = "A Bootstrap theme for Django Admin"
+readme = "README.rst"
+authors = [
+  {name = "Riccardo Forina", email = "riccardo@forina.me"}
+]
+maintainers = [
+  {name = "Anton Degtyarev", email = "ad@evollabs.ae"}
+]
+classifiers = [
+    'Development Status :: 5 - Production/Stable',
+    'Environment :: Web Environment',
+    'Framework :: Django',
+    'Intended Audience :: Developers',
+    'License :: OSI Approved :: BSD License',
+    'Operating System :: OS Independent',
+    'Programming Language :: Python',
+    'Programming Language :: Python :: 3',
+    'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
+    'Topic :: Software Development',
+    'Topic :: Software Development :: Libraries :: Application Frameworks',
+]
+license = {text = "BSD License"}
+dependencies = [
+
+]
+
+[project.optional-dependencies]
+dev = [
+    "coverage",  # testing
+    "mypy",  # linting
+    "pytest",  # testing
+    "ruff"  # linting
+]
+
+[project.urls]
+
+bugs = "https://github.com/adeg/django-admin-bootstrapped/issues"
+changelog = "https://github.com/adeg/django-admin-bootstrapped/blob/master/CHANGELOG"
+homepage = "https://github.com/adeg/django-admin-bootstrapped"
+
+[tool.setuptools]
+package-dir = {"" = "."}
+
+[tool.setuptools.package-data]
+"*" = ["*.*"]
+
+
+
+
+# Mypy
+# ----
+
+[tool.mypy]
+files = "."
+
+# Use strict defaults
+strict = true
+warn_unreachable = true
+warn_no_return = true
+
+[[tool.mypy.overrides]]
+# Don't require test functions to include types
+module = "tests.*"
+allow_untyped_defs = true
+disable_error_code = "attr-defined"
